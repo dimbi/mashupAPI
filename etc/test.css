@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-size: Helvetica;
+}
+
+.innerContent{
+	background-color: aqua;
+}
+
+.container{
+	margin: 0 auto;
+	background-color: pink;
+	width: 960px;
+	text-align: center;
+}
+
+@media(max-width: 960px){
+	.container{
+	width: 100%;
+	}
+}
