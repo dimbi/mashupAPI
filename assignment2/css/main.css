@@ -30,7 +30,14 @@ h2 {
     color: rgb(116, 195, 174);
 }
 
-h3, h4, h5, h6 {
+h4 {
+    background-color: white;
+    font-family: "Raleway";
+    font-weight: 300;
+    color: black;
+}
+
+h3, h5, h6 {
     font-family: "Raleway";
     font-weight: 300;
     color: rgb(116, 195, 174);
