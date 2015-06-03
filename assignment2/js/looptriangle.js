@@ -1,4 +1,7 @@
-var result = "";
-for (var i = 0; i < 7; i++){
-	console.log(result += "#");
+function hashmountain(size){
+	var result = "";
+	for (var i = 1; i < (size+1); i++){
+		console.log(result += "#");
+	}	
 }
+
