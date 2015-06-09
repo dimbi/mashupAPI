@@ -62,7 +62,8 @@ function getDronesLocation(map) {
                 map: map,
                 title: dronesAreaNameArray[i]
             	});
-		}
+
+	    	}
 		}
 	});
 }

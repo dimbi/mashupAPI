@@ -54,15 +54,33 @@ function getInstagram(term){
 		success: function(data){
 			console.log("instagram success..");
 
-			var theHTMLString = '<ol><h1>'+term+' today shown by latest Instagram Posts</h1>';
-			for (var i=0; i < data.data.length; i++){
-				var imgLink = data.data[i].images.low_resolution.url;
-				theHTMLString += '<img src="' + imgLink +'">';
+			var theHTMLString = '<ol><h1>'+term+' today shown by latest Instagram Posts.</h1>';
+
+			if (!isFound){
+				theHTMLString += '<h2>'+term+' has never been attacked by drones. You can see from the pictures. They\'re all smiling. Maybe you too.</h2><br><br>';
+				for (var i=0; i < data.data.length; i++){
+						var imgLink = data.data[i].images.low_resolution.url;
+						theHTMLString += '<img src="' + imgLink +'">';
+					}
 			}
 
-			theHTMLString += '</ol>';
-			
+			else{				
+				if (data.data.length == 0){
+					theHTMLString += '<h2>'+term+' has been attacked by drones in the past. Currently, no instagram posts from this area.<br> Hopefully they\'re safe. And happy.</h2>';
+				}
+				else{
+					theHTMLString += '<h2>'+term+' has been attacked by drones in the past. What you\'re about to see might not be pleasant. They are the latest instagram posts taken in the radius of 5 Km from the center of warzone. It might, however, show you a glimpse of hope too. Stop right here if you aren\'t ready. Continue only if you are human, who\'re interested in reality.</h2><br>';
+					for (var i=0; i < data.data.length; i++){
+						var imgLink = data.data[i].images.low_resolution.url;
+						theHTMLString += '<img src="' + imgLink +'">';
+					}
+				}
+			}
+
+			theHTMLString += '</ol>';			
 			$('#instagramImg').html(theHTMLString);
+
+			window.scrollTo(0,document.body.scrollHeight);
 		}
 	});
 }
