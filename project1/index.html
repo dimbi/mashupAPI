@@ -4,24 +4,30 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pakistan Today</title>
-    <h1>Pakistan Today</h1><br>
+    <title>Drone wars</title>
+    <h1>Drone wars around the world from 2004.</h1>
+    <h2>Search city name or click on the the marker on the maps. If you have no idea, start typing (autocomplete) or hover your mouse on the maps' marker.</h2><br>
     <link href="css/main.css" rel="stylesheet">
     <link href="css/maps.css" rel="stylesheet">
 
 
-      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="js/maps.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/typeahead.js"></script>
+  <script type="text/javascript" src="js/textinput.js"></script>
   </head>
 
  <!--   body -->
   <body>
-      <input type="text" id="theInputBox" placeholder="type the name of city in Pakistan or click on maps"></input>
+      <div id="the-basics">
+      <input class="typeahead" id = "inputAhead" type="text" placeholder="type city name..">
       <button id="searchButton">SEARCH</button>
-      <div id="map-canvas"></div>
+      </div>
+
+      <div id="map-canvas"></div><br><br>
       <div id = "instagramImg"></div>
-      <div id = "wikiArticle"></div>
   </body>
 </html>

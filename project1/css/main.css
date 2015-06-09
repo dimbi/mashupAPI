@@ -26,10 +26,11 @@ h1 {
 }
 
 h2 {
- 	background-color: white;
-    font-family: "Raleway";
+ 	background-color: black;
+    font-family: "Lato";
     font-weight: 300;
-    color: darkred;
+    font-size: 20px;
+    color: grey;
 }
 
 h3, h4, h5, h6 {
@@ -43,12 +44,24 @@ p {
     margin-bottom: 25px;
 }
 
-input {
-    width: 500px;
+#the-basics {
+    background-color: black;
+}
+
+#inputAhead {
+    width: 150;
+    background-color: white;
 }
 
 button {
+    left: 0px;
+    top: 0px;
+    width:80px;
     text-align: center;
+}
+
+#searchButton {
+     position: relative;
 }
 
 .centered {
