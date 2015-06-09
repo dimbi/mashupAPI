@@ -49,7 +49,12 @@ function getDronesLocation(map) {
 
 			var marker = [];
 			for(var i=0; i<dronesData.strike.length; i++){
-				dronesAreaNameArray.push(dronesData.strike[i].location);
+				if (dronesData.strike[i].town){
+					dronesAreaNameArray.push(dronesData.strike[i].town);
+				}
+				else{
+					dronesAreaNameArray.push(dronesData.strike[i].location);
+				}
 				dronesLatArray.push(dronesData.strike[i].lat);
 				dronesLonArray.push(dronesData.strike[i].lon);
 
