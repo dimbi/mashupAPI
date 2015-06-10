@@ -4,6 +4,8 @@ var latCoord = [];
 var lonCoord = [];
 var strikeData = [];
 var arrayImg = [];
+var queryLat;
+var queryLon;
 
 var dataTest;
 
@@ -35,6 +37,10 @@ function getInstagram(term){
 	// then search latest instagram posts from within 5 Km of the center lat 
 	if (isFound == true){
 		var idx = Math.floor(Math.random()*latCoord.length);
+		queryLat = latCoord[idx];
+		queryLon = lonCoord[idx];
+		map.setCenter(new google.maps.LatLng(queryLat, queryLon));
+		map.setZoom(13); 
 		var searchQuery = 'https://api.instagram.com/v1/media/search?lat='+latCoord[idx]+'&lng='+lonCoord[idx]+'&distance=5000&access_token='+accessToken;
 		console.log(searchQuery);
 	}
@@ -166,7 +172,7 @@ function printNews(data){
 				theHTMLString += '<br><img src=' + arrayImg[Math.floor(Math.random()*arrayImg.length)] +'><br>';
 							
 
-				if (data[i].names){
+				if (data[i].deaths){
 					theHTMLString += '<h4>Death tolls: ';
 					theHTMLString += data[i].deaths+' persons'+'<br>';
 				}
@@ -175,7 +181,7 @@ function printNews(data){
 					theHTMLString += '0 person'+'<br>';
 				}
 
-				if (data[i].names){
+				if (data[i].names !== ""){
 					theHTMLString += 'Death victims: ';
 					theHTMLString += data[i].names+'<br>';
 				}
