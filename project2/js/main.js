@@ -87,7 +87,7 @@ function drawChords (matrix, mmap) {
 
     function groupTip (d) {
       var p = d3.format(".1%"), q = d3.format(",d");
-      return "Total immigrants from "
+      return "Total number of people moving in/out "
           + d.gname + " : " + q(d.gvalue) + "<br/>";
       }
 
