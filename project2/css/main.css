@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+/**{
+	margin: 1%;
+	padding: 1%;
+}*/
+
+
+body {
+  	background-color: #EAEAEA;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;    
+    margin-top: 0px;
+    margin: none;
+    padding: none;
+}
+
+h1 {
+   margin-top: 0px;
+ 	 background-color: #EAEAEA;
+   font-weight: 300;
+   font-size: 72px;
+   color: black;
+	 margin-left: 0;
+	 font-family: 'Raleway';
+}
+
+h1 ~ aside {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;    
+  left: 2.5%;
+  position: absolute;
+  width: 720;
+}
+
+
+  #tooltip {
+    color: white;
+    opacity: .9;
+    background: #333;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    visibility: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+	font-family: "Lato";
+  }
+
+  #circle circle {
+  	left:0;
+    fill: none;
+    pointer-events: all;
+	font-family: "Lato";
+  }
+
+  path.group {
+    fill-opacity: .8;
+	font-family: "Lato";
+  }
+
+  path.chord {
+    fill-opacity: .8;
+    stroke: #000;
+    stroke-width: .25px;
+	font-family: "Lato";
+  }
+
+  #circle:hover path.fade {
+    display: none;
+  }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../common/delimited-favicon-v4.ico">
+  </head>
+
+  <body>
+    <h1>Where do expatriate go?</h1>
+
+    <p>Mouseover the circle outer ring next to the country of interest to show the to total number of immigrants from that country. In the future this will also have top 5 country of destination and the respective number of Immigrants to those countries. The thickness of links between countries represents encodes the number of people moving between tho countries.The thicker lines means larger number of people. Mousover on the chord (string) connecting two countries will show the number of immigrants of those two countries.</p>
+
+    <p>Play around by hovering over chords and lines!</p>
+
+    <div id="tooltip"></div>
+    <div id="chord-chart"></div>
+
+    <!-- script -->
+    <script src="js/d3.js"></script>
+    <script src="js/queue.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/mapper.js"></script>
+    <script src="js/config.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <p class="attribution">Source: <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">Global Migrant Origin Database</a>.
+
+    <p>In order to assist the chord diagram visualization, the international maps are plotted below using d3.js. However, at this point I only managed to get the number of population for each countries. In the future, the data from the above mentioned visualization will be syncronized so that users who are clicking at the diagram will also get the spatial interpretations in the maps below, and vice versa. Morover, maps will also enhanced with d3.js animation which will plot links between migration source and destination countries.</p>
+
+    <p>Mousover on any countries will display the data related to each country. Currently, it has only a population data from wikipedia. In the future, it will have the migrations summary, GDP percapita, as well as simple links connecting with other related countries.</p>
+
+    <link rel="stylesheet" href="css/worldmap.css">
+
+    <div id="tooltip-container"></div>
+    <div id="canvas-svg"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/worldmap.js"></script>
+
+    <p>For the chord diagram, I am heavily inspired by the visualizations from Mike Bostocks in his blog especially those related to chords diagram: <a href="http://bl.ocks.org/mbostock/4062006">simple chord diagram</a> as well as <a href="http://bl.ocks.org/mbostock/1308257">European debt visualization</a>, and also this neat <a href="http://www.redotheweb.com/DependencyWheel/">dependency wheel viz</a>. Finally, the biggest influence is from  <a href="http://bost.ocks.org/mike/uberdata/">uber visualization</a> by Mike Bostock.
+
+    <p>For future works, creating sorted and user-adjustable number of countries like in this <a href="http://blog.csaladen.es/refugees/">Refugee Visualization</a> by csaladen is desirable</p>.
+
+    <p>Other notable mention is this <a href="http://migrationsmap.net/#/NER/departures">Migration map visualization</a>, although this used relatively older framework.</p>
+
+
+    <footer>
+      <aside>June 21, 2015</aside>
+      <a href="../" rel="author">Dimas Rinarso</a>
+    </footer>
+
+  </body>
+</html>
