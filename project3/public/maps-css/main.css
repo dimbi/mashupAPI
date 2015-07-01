@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+/**{
+	margin: 1%;
+	padding: 1%;
+}*/
+
+head {
+    margin-top: 0px;
+  }
+
+
+body {
+    margin-top: 0px;
+    background-color: #EAEAEA;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;    
+    height: 100%;
+    text-align: center;
+
+}
+
+h1 {
+   margin-top: 0px;
+ 	 background-color: #EAEAEA;
+   font-weight: 300;
+   font-size: 48px;
+   color: #559E83;
+	 margin-left: 0;
+	 font-family: 'Raleway';
+}
+
+h2 {
+   margin-top: 0px;
+   background-color: #EAEAEA;
+   font-weight: 300;
+   font-size: 20px;
+   color: #559E83;
+   margin-left: 0;
+   font-family: 'Raleway';
+}
+
+h3 {
+  margin-top: 0px;
+}
+
+#loading {
+  margin-top: 365px;
+}
+
+ #map-canvas {
+    height: 600px;
+    width: 100%;
+    left: 0;
+    top: 0; 
+  }
+
+
+
+#content{
+  display:none;
+}
+
+  #tooltip {
+    color: white;
+    opacity: .9;
+    background: #333;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    visibility: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+	font-family: "Lato";
+  }
+
+  #circle circle {
+  	left:0;
+    fill: #EAEAEA;
+    pointer-events: all;
+  	font-family: "Lato";
+    text-align: center;
+
+  }
+
+  path.group {
+    fill-opacity: .8;
+	font-family: "Lato";
+  }
+
+  path.chord {
+    fill-opacity: .8;
+    stroke-color: white;
+    stroke-width: .25px;
+	  font-family: "Lato";
+  }
+
+  #circle:hover path.fade {
+    display: none;
+  }
+
+button {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: "Lato";
+  color: #ffffff;
+  font-size: 17px;
+  background: #559E83;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+button:hover {
+/*  background: #04d6c5;
+*/  background: #2bad97;
+  text-decoration: none;
+}
+
+ #legend {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #000;
+    text-align: left;
+    margin-bottom: 0px;
+  }

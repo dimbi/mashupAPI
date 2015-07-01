@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+body{
+  background-color: #559E83;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 32px;
+  color:  #EAEAEA;
+  text-align: center;
+}
+
+input{
+	margin-left: 50px;
+	height: 30px;
+	width: 300px;
+	text-align: center;
+
+}
+
+button{
+	padding: 5px 10px;
+	height: 60px;
+	width: 300px;
+	background-color: maroon;
+	font-weight: 300;
+    font-size: 24px;
+  	color:  white;
+  	text-align: center;
+} 
+
+#container{
+	display: none;
+  	text-align: center;
+
+}
+
+#mainTitle{
+	text-align: center;
+}
+

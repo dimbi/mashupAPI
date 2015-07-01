@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Say earth</title>
+	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/cover.css" rel="stylesheet">
+	    <link href="bootstrap/css/bootstrap-datepicker3.css" rel="stylesheet">
+	    <link rel="stylesheet" href="http://css-spinners.com/css/spinner/gauge.css" type="text/css">
+
+	</head>
+
+	<body>
+				<!--
+				<script>
+					//Grab the response object var
+					var page = '<%=page%>';
+				</script>
+				-->
+
+			 <div class="site-wrapper">
+		      <div class="site-wrapper-inner">
+		        <div class="cover-container">
+		          <div class="inner cover">
+		      	
+	            	<div id="container">
+	            		<h1 class="cover-heading"><font color="black" size="82px">People move. People agglomerate.</font></h1>
+						<h2>37% of you came from other parts of the earth.</h2>
+		            	<p class="lead">This website is a fully anonymous crowdsourcing-based migration map that updates every time users input the field.</p>
+
+							<div>
+								Where are you originally from? <br>
+								
+								<!--
+								<input type='text' id='originCountry'/><br>
+								-->
+
+								<input id="originCountry" type="text" size="50" placeholder="Enter a location" autocomplete="on" runat="server" />  
+								<input type="hidden" id="city2" name="city2" />
+								<input type="hidden" id="cityLat" name="cityLat" />
+								<input type="hidden" id="cityLng" name="cityLng" /> 
+
+							</div>
+							<div>
+								When did you move here?<br>
+				  			      <div id="datepicker" class="input-daterange">
+				  			      	<input id="yearMove" type="text" class="span2" value="Enter a date" >
+							      </div>
+
+							      <br><br><br>
+							</div>
+               			  <button id="enterButton" class="btn btn-lg btn-default">TAKE ME TO THE RESULT</button>
+               			  <p id="demo"></p>
+		            </div>
+
+		            <div id="loading">
+		            	<div class="gauge-loader">
+   						  </div>
+					  	<p>Loading…</p>
+					</div>
+
+
+		          <div class="mastfoot">
+		            <div class="inner">
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+
+			<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+			<script src="js/maps.js"></script>
+			<script src="js/main.js"></script>
+			<script src="bootstrap/js/bootstrap.js"></script>
+			<script src="bootstrap/js/bootstrap-datepicker.js"></script>
+
+	</body>
+
+
+    <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2015 Mashup creating API - Dimas Rinarso. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>

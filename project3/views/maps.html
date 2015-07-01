@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../common/delimited-favicon-v4.ico">
+    <link rel="stylesheet" href="http://css-spinners.com/css/spinner/gauge.css" type="text/css">
+    <link rel="stylesheet" href="maps-css/main.css">
+
+     <div id="loading">
+        <div class="gauge-loader">
+        </div>
+        <p>Constructing d3 chart and maps…</p>
+      </div>
+
+
+  </head>
+
+  <body>
+   
+    <div id="content">
+
+        <div id="map-canvas"></div>
+        <div id="legend" style="position:absolute; right:0; bottom:-10;"><h3>Legend</h3></div>
+        
+        <h1>Realtime live input maps</h1>
+        <p>The international maps are plotted based on real-time user input you jus generated. The more you people use this website, the more accurate and complete the maps and chart is. Morover, maps is also enhanced with  animation which will plot links between migration source and destination countries.
+
+        Mousover on any countries will display the data related to each country.</p>
+
+        <button id="scrollDown">scroll down to chord diagram</button>
+
+        <br><br><br> 
+        <div id="tooltip"></div>
+        <div id="chord-chart"></div>
+
+        <h1 id="title2">Migration chord diagram</h1>
+
+        <p>Mouseover the circle outer ring next to the country of interest to show the to total number of immigrants from that country. In the future this will also have top 5 country of destination and the respective number of Immigrants to those countries. The thickness of links between countries represents encodes the number of people moving between tho countries.The thicker lines means larger number of people. Mousover on the chord (string) connecting two countries will show the number of immigrants of those two countries.
+
+        Play around by hovering over edges and chords!
+        </p>
+
+      
+        <p class="attribution">Source: <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">Global Migrant Origin Database.</a>
+        <br><br>
+
+
+        <p>For the chord diagram, I am heavily inspired by the visualizations from Mike Bostocks in his blog especially those related to chords diagram: <a href="http://bl.ocks.org/mbostock/4062006">simple chord diagram</a> as well as <a href="http://bl.ocks.org/mbostock/1308257">European debt visualization</a>, and also this neat <a href="http://www.redotheweb.com/DependencyWheel/">dependency wheel viz</a>. Finally, the biggest influence is from  <a href="http://bost.ocks.org/mike/uberdata/">uber visualization</a> by Mike Bostock.
+
+        <p>For future works, creating sorted and user-adjustable number of countries like in this <a href="http://blog.csaladen.es/refugees/">Refugee Visualization</a> by csaladen is desirable.</p>
+
+        <p>Other notable mention is this <a href="http://migrationsmap.net/#/NER/departures">Migration map visualization.</a></p>
+
+        <footer>
+          <aside>New York, June, 2015</aside>
+          <a href="http://www.dimasrinarso.com" rel="author">Dimas Rinarso</a>
+        </footer>
+
+    </div>
+
+        <!-- script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="maps-js/d3.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <script src="maps-js/arc-line.js"></script>
+        <script src="maps-js/queue.js"></script>
+        <script src="maps-js/underscore.js"></script>
+        <script src="maps-js/mapper.js"></script>
+        <script src="maps-js/config.js"></script>
+        <script type="text/javascript" src="maps-js/main.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  </body>
+</html>
